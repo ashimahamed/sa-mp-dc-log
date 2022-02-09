@@ -7,7 +7,7 @@ public OnFilterScriptInit()
 	print("|      Irandaam Ulagam RP Bot        |");
 	print("|    BY Ashim aka Ashim.Code         |");
 	print("=====================================\n");
-	g_Discord_Chat = DCC_FindChannelById("931464894300160010"); // Discord channel ID
+	g_Discord_Chat = DCC_FindChannelById("Your Discord Channel ID Here"); // Discord channel ID
     return 1;
 }
 forward DCC_OnMessageCreate(DCC_Message:message);
@@ -44,7 +44,7 @@ public OnPlayerConnect(playerid)
    	new name[MAX_PLAYER_NAME + 1];
     GetPlayerName(playerid, name, sizeof name);
     if (_:g_Discord_Chat == 0)
-    g_Discord_Chat = DCC_FindChannelById("931464894300160010"); // Discord channel ID
+    g_Discord_Chat = DCC_FindChannelById("Your Discord Channel ID Here"); // Discord channel ID
     new string[128];
     format(string, sizeof string, " ```%s Joined The Server. :)```", name);
     DCC_SendChannelMessage(g_Discord_Chat, string);
@@ -55,7 +55,7 @@ public OnPlayerDisconnect(playerid, reason)
     new name[MAX_PLAYER_NAME + 1];
     GetPlayerName(playerid, name, sizeof name);
     if (_:g_Discord_Chat == 0)
-    g_Discord_Chat = DCC_FindChannelById("931464894300160010"); // Discord channel ID
+    g_Discord_Chat = DCC_FindChannelById("Your Discord Channel ID Here"); // Discord channel ID
     new string[128];
     format(string, sizeof string, " ```%s Has Left The Server. :(```", name);
     DCC_SendChannelMessage(g_Discord_Chat, string);
